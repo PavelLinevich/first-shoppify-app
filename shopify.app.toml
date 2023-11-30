@@ -1,3 +1,28 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
+name = "first-shoppify-app"
+client_id = "926edee31168d7ba163f8dd536dbd054"
+application_url = "https://saturn-pasta-ant-blogger.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://saturn-pasta-ant-blogger.trycloudflare.com/auth/callback",
+  "https://saturn-pasta-ant-blogger.trycloudflare.com/auth/shopify/callback",
+  "https://saturn-pasta-ant-blogger.trycloudflare.com/api/auth/callback",
+  "https://saturn-pasta-ant-blogger.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-9f16df5f.myshopify.com"
